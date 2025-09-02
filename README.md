@@ -1,9 +1,3 @@
-You are correct. When using SQLite, the `php artisan migrate` command will automatically create the database file if it doesn't already exist.
-
-Here is the updated `README.md` with only the SQLite option.
-
------
-
 # Simple Note-Taking API
 
 A simple RESTful API for creating, retrieving, updating, and deleting notes. This project was built with Laravel to demonstrate basic API development, including CRUD operations, data validation, and handling single and multiple resource requests.
