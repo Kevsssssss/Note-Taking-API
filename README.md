@@ -1,4 +1,8 @@
-Yes, here's a `README.md` file for your note-taking API project, formatted for GitHub.
+You are correct. When using SQLite, the `php artisan migrate` command will automatically create the database file if it doesn't already exist.
+
+Here is the updated `README.md` with only the SQLite option.
+
+-----
 
 # Simple Note-Taking API
 
@@ -22,7 +26,7 @@ Follow these steps to set up and run the project locally.
 
   * **PHP:** Version 8.1 or higher
   * **Composer:** For managing project dependencies
-  * **MySQL:** Or another database system supported by Laravel
+  * **SQLite:** For the database
 
 ### Installation
 
@@ -46,16 +50,14 @@ Follow these steps to set up and run the project locally.
     cp .env.example .env
     ```
 
-4.  **Set your database credentials** in the `.env` file:
+4.  **Set up the database for SQLite:**
+    Set the database connection in your `.env` file to point to a local SQLite file.
 
     ```ini
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=note_taking_db
-    DB_USERNAME=root
-    DB_PASSWORD=
+    DB_CONNECTION=sqlite
     ```
+
+    You do not need to manually create the file; it will be created automatically during migration.
 
 5.  **Generate the application key:**
 
@@ -64,7 +66,7 @@ Follow these steps to set up and run the project locally.
     ```
 
 6.  **Run database migrations:**
-    This will create the `notes` table in your database.
+    This will create the `notes` table and the `database.sqlite` file in your `database` directory.
 
     ```bash
     php artisan migrate
