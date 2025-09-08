@@ -11,7 +11,16 @@ return new class extends Migration
      */
     // database/migrations/YYYY_MM_DD_..._create_notes_table.php
 
-    
+    public function up(): void
+    {
+        Schema::create('notes', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->text('body');
+            $table->json('tags')->nullable();
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.
